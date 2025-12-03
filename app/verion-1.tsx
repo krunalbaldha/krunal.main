@@ -1,3 +1,6 @@
+// Version 1
+
+
 "use client"; // needed because we use hooks + framer-motion
 
 import React, { useEffect, useState } from "react";
@@ -312,14 +315,10 @@ export default function Portfolio() {
                 '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
                 '50%': { opacity: '0.0', transform: 'scale(1.1)' },
               },
-              'spin-slow': {
-                'from': { transform: 'rotate(0deg)' },
-                'to': { transform: 'rotate(360deg)' }
-              }
+              // spin-slow is useful if you want to fall back to a spinner
             },
             animation: {
               'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'spin-slow': 'spin-slow 1s linear infinite' // Added for loader
             },
           },
       */}
@@ -407,8 +406,7 @@ export default function Portfolio() {
               I'M
             </p>
 
-            {/* MODIFIED: Added gradient text classes */}
-            <h1 className="text-5xl font-extrabold text-slate-900 sm:text-6xl md:text-7xl bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-extrabold text-slate-900 sm:text-6xl md:text-7xl dark:text-white">
               Krunal Baldha
             </h1>
 
@@ -916,7 +914,7 @@ export default function Portfolio() {
             <button
               type="submit"
               disabled={isLoading}
-              // Button classes updated for loading/idle states
+              // Added relative, overflow-hidden, and fixed height for the animation wrapper
               className={`
                 mt-2 inline-flex w-full items-center justify-center rounded-full relative overflow-hidden
                 px-5 py-2 text-xs font-semibold shadow-[0_18px_45px_rgba(236,72,153,0.65)] transition
@@ -957,7 +955,7 @@ export default function Portfolio() {
 
         {/* FOOTER */}
         <footer className="mt-2 flex flex-col items-center justify-between gap-2 border-t border-white/60 pt-4 text-[14px] text-slate-500 sm:flex-row dark:border-slate-700/60 dark:text-slate-400">
-          <span>© {new Date().getFullYear()} <b>krunal.live</b> All rights reserved</span>
+          <span>© {new Date().getFullYear()} krunal.live</span>
         </footer>
       </main>
     </div>
