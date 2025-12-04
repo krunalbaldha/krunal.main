@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Instagram,
   Facebook,
+  Twitter,
 } from "lucide-react";
 
 // ==============================
@@ -838,6 +839,12 @@ export default function Portfolio() {
                 href="https://www.linkedin.com/in/krunalbaldha"
                 Icon={Linkedin}
               />
+
+              <MotionSocialLink
+                href="https://x.com/krunalbaldha1"
+                Icon={Twitter}
+              />
+
               <MotionSocialLink
                 href="https://www.instagram.com/krunal.baldha?igsh=MWpxb2tqeWY2Z2hiMg=="
                 Icon={Instagram}
